@@ -11,4 +11,4 @@ nm-applet &
 xfce4-power-manager &
 #xfce4-volumed-pulse &
 /bin/bash ~/scripts/run-mailsync.sh &
-~/scripts/autostart_wait.sh &
+/binbash  ~/scripts/autostart_wait.sh &
