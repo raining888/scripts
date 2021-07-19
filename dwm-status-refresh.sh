@@ -41,9 +41,10 @@ print_volume() {
 	volume="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
 	if test "$volume" -gt 0
 	then
-		echo -e "\uE05D${volume}"
+          echo -e "🎶${volume}"
+          #echo -e "\uE05D${volume}"
 	else
-		echo -e "Mute"
+	  echo -e "Mute"
 	fi
 }
 
@@ -116,7 +117,7 @@ print_bat(){
 		#echo -e "${charge}"
 	#fi
 	#echo "$(get_battery_charging_status) $(get_battery_combined_percent)%, $(get_time_until_charged )";
-	echo "$(get_battery_charging_status),$(get_battery_combined_percent)%,$(get_time_until_charged )";
+	echo "$(get_battery_charging_status),$(get_battery_combined_percent)%";
 }
 
 print_date(){
@@ -156,7 +157,7 @@ get_bytes
 vel_recv=$(get_velocity $received_bytes $old_received_bytes $now)
 vel_trans=$(get_velocity $transmitted_bytes $old_transmitted_bytes $now)
 
-xsetroot -name " $(print_mem)M ⬇$vel_recv ⬆$vel_trans $(dwm_alsa) [$(print_bat)]$(show_record) $(print_date) "
+xsetroot -name " $(print_mem)M ⬇$vel_recv ⬆$vel_trans $(dwm_alsa) [$(print_bat)] $(print_volume) $(print_date) "
 
 # Update old values to perform new calculations
 old_received_bytes=$received_bytes
