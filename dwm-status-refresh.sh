@@ -39,10 +39,11 @@ old_time=$now
 
 print_volume() {
 	volume="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
-	if test "$volume" -gt 0
+        switch="$(amixer get Master | tail -n1 | awk '{print $6}')"
+        if test "$volume" -gt 0 && [[ $switch =~ "on" ]]
 	then
           echo -e "🎶${volume}"
-          #echo -e "\uE05D${volume}"
+         #echo -e "\uE05D${volume}"
 	else
 	  echo -e "Mute"
 	fi
