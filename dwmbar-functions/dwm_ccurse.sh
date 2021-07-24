@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # A dwm_bar function to show the closest appointment in calcurse
 # Joe Standring <git@joestandring.com>
