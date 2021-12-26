@@ -1,0 +1,11 @@
+# editor
+neovim node npm
+
+# battery
+acpi bc xfce4-power-manager
+
+# volumn
+alsa-utils sof-firmware alsa-ucm-conf
+
+# compile
+gcc clang cmake bash-language-server
