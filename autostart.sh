@@ -5,6 +5,7 @@
 picom -b
 /bin/bash ~/scripts/tap-to-click.sh &
 /bin/bash ~/scripts/inverse-scroll.sh &
+/bin/bash ~/scripts/display.sh &
 fcitx &
 nm-applet &
 xfce4-power-manager &
