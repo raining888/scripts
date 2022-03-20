@@ -1,11 +1,11 @@
 #!/bin/bash
 
 /bin/bash ~/scripts/dwm-status.sh &
-/bin/bash ~/scripts/wp-autochange.sh &
 picom -b
 /bin/bash ~/scripts/tap-to-click.sh &
 /bin/bash ~/scripts/inverse-scroll.sh &
 /bin/bash ~/scripts/display.sh &
+/bin/bash ~/scripts/wp-autochange.sh &
 fcitx &
 nm-applet &
 xfce4-power-manager &
